@@ -24,7 +24,11 @@ void rleWrite (FILE * file) { //handles the compression and writing it to output
 			count = 1;
 			
 		}	
-	}	
+	}
+	temp = *"\n";
+	
+	fwrite(&count,4,sizeof(count),stdout);
+	fwrite(&temp,sizeof(temp),1,stdout);
 }
 
 
